@@ -13,6 +13,8 @@ func main() {
 	// Book routes
 	r.HandleFunc("/books", handlers.GetBooks).Methods("GET")
 	r.HandleFunc("/books", handlers.CreateBook).Methods("POST")
+	r.HandleFunc("/books", handlers.UpdateBook).Methods("PUT")
+	r.HandleFunc("/books", handlers.DeleteBook).Methods("DELETE")
 
 	// Author routes
 	r.HandleFunc("/authors", handlers.GetAuthors).Methods("GET")
